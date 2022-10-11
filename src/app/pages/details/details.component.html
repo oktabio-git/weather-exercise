@@ -1,0 +1,7 @@
+<div *ngIf="weatherData">
+  <div class="content">
+    <p class="main">{{ weatherData.main }}</p>
+    <p class="maxTemp">Max: {{ weatherData.maxTemp | number: '1.0-0' }}° F</p>
+    <p class="minTemp">Min: {{ weatherData.minTemp | number: '1.0-0' }}° F</p>
+  </div>
+</div>

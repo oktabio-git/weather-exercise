@@ -1,0 +1,31 @@
+.weather-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem;
+    height: 100vh;
+    transition: 2s;
+
+    .content {
+        color: #fff;
+        text-shadow: 2px 2px 10px #606060;
+        width: 38rem;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .weather-bg {
+        .content {
+            font-size: 76px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .weather-bg {
+        .content {
+            font-size: 90px;
+        }
+    }
+}
