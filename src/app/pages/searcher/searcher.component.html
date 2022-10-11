@@ -1,0 +1,14 @@
+<div class="p-grid ui-fluid">
+  <div class="p-col-12">
+    <div class="ui-inputgroup">
+      <input
+        type="text"
+        pInputText
+        placeholder="Search"
+        [(ngModel)]="searchInput"
+      />
+      <button pButton icon="pi pi-search" (click)="getWeather()"></button>
+    </div>
+  </div>
+</div>
+<p-toast position="bottom-right"></p-toast>

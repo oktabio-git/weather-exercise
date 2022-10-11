@@ -1,0 +1,19 @@
+<div
+  class="weather-bg"
+  [ngStyle]="{ 'background-image': 'url(' + weatherBg + ')' }"
+>
+  <div class="searcher">
+    <app-searcher (parentWeather)="setBgWeather($event)"></app-searcher>
+  </div>
+  <div class="content" *ngIf="weatherBg == '../assets/images/default.jpg'">
+    <p>
+      Search a city and click on the icon to see the weather for that location!
+    </p>
+  </div>
+  <div class="weather">
+    <app-weather></app-weather>
+  </div>
+  <div class="details">
+    <app-details></app-details>
+  </div>
+</div>
