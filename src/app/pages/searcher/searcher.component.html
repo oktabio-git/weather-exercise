@@ -1,14 +1,17 @@
-<div class="p-grid ui-fluid">
-  <div class="p-col-12">
-    <div class="ui-inputgroup">
-      <input
-        type="text"
-        pInputText
-        placeholder="Search"
-        [(ngModel)]="searchInput"
-      />
-      <button pButton icon="pi pi-search" (click)="getWeather()"></button>
-    </div>
+<div class="container">
+  <div class="row">
+    <form class="d-flex" (ngSubmit)="getWeather()">
+      <div class="input-group">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Search"
+          [formControl]="searchInput"
+        /><button type="button" class="btn btn-primary" (click)="getWeather()">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+    </form>
   </div>
 </div>
 <p-toast position="bottom-right"></p-toast>

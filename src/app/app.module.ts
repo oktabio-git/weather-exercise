@@ -7,7 +7,7 @@ import { SearcherComponent } from './pages/searcher/searcher.component';
 import { WeatherComponent } from './pages/weather/weather.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WeatherService } from './services/weather.service';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
@@ -31,6 +31,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ButtonModule,
     ToastModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [WeatherService, MessageService],
   bootstrap: [AppComponent],

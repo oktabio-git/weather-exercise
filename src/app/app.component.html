@@ -4,6 +4,15 @@
 >
   <div class="searcher">
     <app-searcher (parentWeather)="setBgWeather($event)"></app-searcher>
+    <div class="container mt-2">
+      <button
+        type="button"
+        class="btn btn-outline-primary"
+        (click)="isCelsius = !isCelsius"
+      >
+        {{ isCelsius ? "°F" : "°C" }}
+      </button>
+    </div>
   </div>
   <div class="content" *ngIf="weatherBg == '../assets/images/default.jpg'">
     <p>
@@ -11,9 +20,9 @@
     </p>
   </div>
   <div class="weather">
-    <app-weather></app-weather>
+    <app-weather [changeDegrees]="isCelsius"></app-weather>
   </div>
   <div class="details">
-    <app-details></app-details>
+    <app-details [changeDegrees]="isCelsius"></app-details>
   </div>
 </div>

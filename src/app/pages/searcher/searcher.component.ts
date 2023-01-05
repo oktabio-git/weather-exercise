@@ -3,6 +3,7 @@ import { WeatherInterface } from 'src/app/interfaces/weatherInterface';
 import { Weather } from 'src/app/models/weather';
 import { WeatherService } from 'src/app/services/weather.service';
 import { MessageService } from 'primeng/api';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-searcher',
@@ -10,7 +11,7 @@ import { MessageService } from 'primeng/api';
   styleUrls: ['./searcher.component.scss'],
 })
 export class SearcherComponent implements OnInit {
-  searchInput: string;
+  searchInput: FormControl = new FormControl('');
   weatherData: Weather;
   @Output() parentWeather = new EventEmitter<string>();
 
@@ -22,7 +23,7 @@ export class SearcherComponent implements OnInit {
   ngOnInit(): void {}
 
   getWeather() {
-    this.weatherService.getWeather(this.searchInput).subscribe(
+    this.weatherService.getWeather(this.searchInput.value).subscribe(
       (res: WeatherInterface) => {
         this.weatherData = new Weather(
           res.name,

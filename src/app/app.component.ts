@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  isCelsius: boolean;
   weatherBg: string = '../assets/images/default.jpg';
 
   setBgWeather(data: string) {

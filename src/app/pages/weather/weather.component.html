@@ -1,6 +1,6 @@
 <div *ngIf="weatherData" class="main-info">
   <div class="content">
-    <p class="temp">{{ weatherData.temp | number: '1.0-0' }}° F</p>
+    <p class="temp">{{ weatherData.temp | number: '1.0-0' }} {{ changeDegrees ? '°C' : '°F' }}</p>
     <p class="name">{{ weatherData.name }}</p>
   </div>
 </div>
